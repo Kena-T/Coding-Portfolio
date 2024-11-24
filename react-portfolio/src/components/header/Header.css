@@ -38,7 +38,6 @@ header {
 
 /* ================ ME ================= */
 .me {
-    /* background: linear-gradient(transparent); */
     width: 30rem;
     height: 100rem;
     position: absolute;
@@ -59,20 +58,3 @@ header {
     font-size: 0.9rem;
 }
 
-/* ======================== MEDIA QUERIES (MEDIUM DEVICES) ========================== */
-@media screen and (max-width: 1024px) {
-    header {
-        height: 84.9vh;
-    }
-}
-
-/* ======================== MEDIA QUERIES (SMALL DEVICES) ========================== */
-@media screen and (max-width: 600PX) {
-    header {
-        height: 84.9vh;
-    }
-
-    .header__socials, .scroll__down {
-        display: none;
-    }
-}
