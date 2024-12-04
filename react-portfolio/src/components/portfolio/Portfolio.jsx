@@ -12,7 +12,7 @@ const Portfolio = () => {
           <div className="portfolio_item-image"></div>
           <h3>This is a portfolio item title</h3>
           <a href="https://github.com/Kena-T/Website" className='btn'>Github</a>
-          <a href="https://github.com/Kena-T/Website" className='btn btn-primary'>Live Demo</a>
+          {/* <a href="https://github.com/Kena-T/Website" className='btn btn-primary'>Live Demo</a> */}
         </article>
       </div>
     </section>
