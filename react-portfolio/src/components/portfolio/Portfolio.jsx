@@ -1,5 +1,11 @@
 import React from 'react'
 import './Portfolio.css'
+import IMG1 from '../../assets/portfolio1.jpg'
+import IMG2 from '../../assets/portfolio2.jpg'
+import IMG3 from '../../assets/portfolio3.jpg'
+// import IMG4 from '../../assets/portfolio4.jpg'
+// import IMG5 from '../../assets/portfolio5.png'
+// import IMG6 from '../../assets/portfolio6.jpg'
 
 const Portfolio = () => {
   return (
@@ -9,10 +15,28 @@ const Portfolio = () => {
 
       <div className="contaniner portfolio_container">
         <article className='portfolio_item'>
-          <div className="portfolio_item-image"></div>
+          <div className="portfolio_item-image">
+            <img src={IMG1} alt="" />
+          </div>
           <h3>This is a portfolio item title</h3>
-          <a href="https://github.com/Kena-T/Website" className='btn'>Github</a>
-          {/* <a href="https://github.com/Kena-T/Website" className='btn btn-primary'>Live Demo</a> */}
+          <a href="https://github.com/Kena-T/Website" className='btn' target='_blank'>Github</a>
+          {/* <a href="https://github.com/Kena-T/Website" className='btn btn-primary' target='_blank'>Live Demo</a> */}
+        </article>
+        <article className='portfolio_item'>
+          <div className="portfolio_item-image">
+            <img src={IMG2} alt="" />
+          </div>
+          <h3>This is a portfolio item title</h3>
+          <a href="https://github.com/Kena-T/Website" className='btn' target='_blank'>Github</a>
+          {/* <a href="https://github.com/Kena-T/Website" className='btn btn-primary' target='_blank'>Live Demo</a> */}
+        </article>
+        <article className='portfolio_item'>
+          <div className="portfolio_item-image">
+            <img src={IMG3} alt="" />
+          </div>
+          <h3>This is a portfolio item title</h3>
+          <a href="https://github.com/Kena-T/Website" className='btn' target='_blank'>Github</a>
+          {/* <a href="https://github.com/Kena-T/Website" className='btn btn-primary' target='_blank'>Live Demo</a> */}
         </article>
       </div>
     </section>
