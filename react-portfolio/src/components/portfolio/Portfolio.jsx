@@ -7,6 +7,31 @@ import IMG3 from '../../assets/portfolio3.jpg'
 // import IMG5 from '../../assets/portfolio5.png'
 // import IMG6 from '../../assets/portfolio6.jpg'
 
+const data = [
+  {
+    id: 1,
+    image: IMG1,
+    title: 'Website',
+    github: 'https://github.com/Kena-T/Website',
+    // demo: 'https://github.com/Kena-T/Website'
+  },
+  {
+    id: 2,
+    image: IMG2,
+    title: 'N/A',
+    github: 'https://github.com/Kena-T',
+    // demo: 'https://github.com/Kena-T'
+  },
+  {
+    id: 3,
+    image: IMG3,
+    title: 'N/A',
+    github: 'https://github.com/Kena-T',
+    // demo: 'https://github.com/Kena-T'
+  },
+]
+
+
 const Portfolio = () => {
   return (
     <section id='portfolio'>
@@ -14,30 +39,22 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
 
       <div className="contaniner portfolio_container">
-        <article className='portfolio_item'>
-          <div className="portfolio_item-image">
-            <img src={IMG1} alt="" />
-          </div>
-          <h3>This is a portfolio item title</h3>
-          <a href="https://github.com/Kena-T/Website" className='btn' target='_blank'>Github</a>
-          {/* <a href="https://github.com/Kena-T/Website" className='btn btn-primary' target='_blank'>Live Demo</a> */}
-        </article>
-        <article className='portfolio_item'>
-          <div className="portfolio_item-image">
-            <img src={IMG2} alt="" />
-          </div>
-          <h3>This is a portfolio item title</h3>
-          <a href="https://github.com/Kena-T/Website" className='btn' target='_blank'>Github</a>
-          {/* <a href="https://github.com/Kena-T/Website" className='btn btn-primary' target='_blank'>Live Demo</a> */}
-        </article>
-        <article className='portfolio_item'>
-          <div className="portfolio_item-image">
-            <img src={IMG3} alt="" />
-          </div>
-          <h3>This is a portfolio item title</h3>
-          <a href="https://github.com/Kena-T/Website" className='btn' target='_blank'>Github</a>
-          {/* <a href="https://github.com/Kena-T/Website" className='btn btn-primary' target='_blank'>Live Demo</a> */}
-        </article>
+        {
+          data.map(({id, image, title, github}) => {
+            return (
+              <article key={id} className='portfolio_item'>
+                <div className="portfolio_item-image">
+                  <img src={image} alt={title} />
+                </div>
+                <h3>{title}</h3>
+                <div className="portfolio_item-cta">
+                  <a href={github} className='btn' target='_blank'>Github</a>
+                  {/* <a href="https://github.com/Kena-T/Website" className='btn btn-primary' target='_blank'>Live Demo</a> */}
+                </div>
+              </article>
+            )
+          })
+        }
       </div>
     </section>
   )
